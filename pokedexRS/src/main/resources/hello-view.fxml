@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="692.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.uce.pokedexRS.view.HelloController">
+   <children>
+      <AnchorPane prefHeight="72.0" prefWidth="692.0" style="-fx-background-color: #E96151;">
+         <children>
+            <Label layoutX="98.0" layoutY="7.0" prefHeight="59.0" prefWidth="266.0" text="Pokemon:" textAlignment="CENTER">
+               <font>
+                  <Font name="Bodoni MT Black" size="48.0" />
+               </font>
+            </Label>
+            <TextField fx:id="searchpoke" layoutX="362.0" layoutY="17.0" prefHeight="42.0" prefWidth="113.0" promptText="id" />
+            <ImageView fitHeight="59.0" fitWidth="61.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/icono.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="searchId" layoutX="488.0" layoutY="18.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="78.0" text="Buscar" />
+            <Button layoutX="572.0" layoutY="17.0" mnemonicParsing="false" onAction="#onSearchById" prefHeight="42.0" prefWidth="105.0" text="Evolucion por Id" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="551.0" fitWidth="692.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/tamañopokemon_dex.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="NamePoke" layoutX="122.0" layoutY="113.0" prefHeight="36.0" prefWidth="195.0" text="  Nombre" textAlignment="CENTER" textFill="#362121">
+         <font>
+            <Font name="Times New Roman Bold" size="21.0" />
+         </font></Label>
+      <Label layoutX="389.0" layoutY="79.0" prefHeight="17.0" prefWidth="48.0" text="Filtros:">
+         <font>
+            <Font name="Bodoni MT Condensed" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="speci" layoutX="443.0" layoutY="80.0" prefHeight="25.0" prefWidth="113.0" promptText="Especie" />
+      <ComboBox fx:id="habita" layoutX="565.0" layoutY="79.0" prefHeight="26.0" prefWidth="113.0" promptText="Habitat" />
+      <TableView fx:id="tablePoke" layoutX="389.0" layoutY="217.0" prefHeight="340.0" prefWidth="286.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="nombreColumn" prefWidth="120.0" text="Nombre" />
+            <TableColumn fx:id="tipoColumn" prefWidth="115.0" text="Tipo" />
+         </columns>
+      </TableView>
+      <TextArea fx:id="descriptionpoke" editable="false" layoutX="30.0" layoutY="224.0" prefHeight="141.0" prefWidth="134.0" promptText="Descripcion">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></TextArea>
+      <ComboBox fx:id="generati" layoutX="443.0" layoutY="113.0" prefHeight="25.0" prefWidth="113.0" promptText="Generación" />
+      <ComboBox fx:id="poke" layoutX="232.0" layoutY="93.0" prefHeight="25.0" prefWidth="113.0" promptText="Pokemon" />
+      <BarChart fx:id="stadistics" layoutX="25.0" layoutY="372.0" prefHeight="206.0" prefWidth="279.0" style="-fx-background-color: #FF8C00;">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="yAxis" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <AnchorPane layoutX="171.0" layoutY="221.0" prefHeight="141.0" prefWidth="134.0" style="-fx-background-color: #FFFAF0;">
+         <children>
+            <ImageView fx:id="imagePoke" fitHeight="111.0" fitWidth="122.0" layoutX="15.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagenes/images.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="232.0" layoutY="163.0" prefHeight="19.0" prefWidth="40.0" text="Altura:">
+         <font>
+            <Font name="Bodoni MT Condensed" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="232.0" layoutY="188.0" prefHeight="26.0" prefWidth="32.0" text="Peso:">
+         <font>
+            <Font name="Bodoni MT Condensed" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="heighpoke" layoutX="277.0" layoutY="167.0" prefHeight="19.0" prefWidth="40.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="weightpoke" layoutX="269.0" layoutY="193.0" prefHeight="21.0" prefWidth="48.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="habiliPoke" layoutX="565.0" layoutY="112.0" prefHeight="26.0" prefWidth="113.0" promptText="Habilidad" />
+      <Label fx:id="nameCombo" layoutX="401.0" layoutY="175.0" prefHeight="27.0" prefWidth="134.0">
+         <font>
+            <Font name="Times New Roman Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="information" layoutX="524.0" layoutY="139.0" prefHeight="21.0" prefWidth="156.0" text="Descripción de la habilidad" visible="false">
+         <font>
+            <Font name="Times New Roman Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="descrip" editable="false" layoutX="515.0" layoutY="160.0" prefHeight="53.0" prefWidth="163.0" visible="false">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="evolutionPoke" layoutX="122.0" layoutY="148.0" mnemonicParsing="false" onAction="#showEvolution" prefHeight="21.0" prefWidth="72.0" text="Evolución" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="375.0" prefWidth="533.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.uce.pokedexRS.view.EvolutionsController">
+   <children>
+      <AnchorPane prefHeight="60.0" prefWidth="562.0" style="-fx-background-color: #8C9EFF;">
+         <children>
+            <Label layoutX="122.0" layoutY="4.0" prefHeight="56.0" prefWidth="319.0" text="Evoluciones" textFill="#f8f6f6">
+               <font>
+                  <Font name="Bodoni MT Black" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="328.0" fitWidth="565.0" layoutX="-3.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/fondosprueba.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="basePoke" fitHeight="150.0" fitWidth="203.0" layoutX="21.0" layoutY="214.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="envolPoke" fitHeight="150.0" fitWidth="203.0" layoutX="359.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="evolutionInfoLabel" layoutX="123.0" layoutY="69.0" prefHeight="35.0" prefWidth="277.0" text="Label" textFill="#f2ebeb">
+         <font>
+            <Font name="Times New Roman Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameBase" layoutX="68.0" layoutY="172.0" prefHeight="35.0" prefWidth="126.0" text="Label" textFill="#e8dede">
+         <font>
+            <Font name="Lucida Bright Demibold" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameBase1" layoutX="366.0" layoutY="210.0" prefHeight="35.0" prefWidth="140.0" text="Label" textFill="#e8dede">
+         <font>
+            <Font name="Lucida Bright Demibold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
